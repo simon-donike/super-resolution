@@ -1,3 +1,5 @@
 .DS_Store
 .ipynb_checkpoints
 mac_ignore.sh
+.gitignore
+auto_commit.sh
