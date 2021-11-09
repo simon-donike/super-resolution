@@ -4,6 +4,7 @@ git status;
 find . -size +20M | sed 's|^\./||g' | cat > .gitignore;
 echo ".DS_Store" >> .gitignore;
 echo ".ipynb_checkpoints" >> .gitignore;
+echo "mac_ignore.sh" >> .gitignore;
 git add .;
 git commit -m "automatic commit";
 git push -u origin main;
