@@ -6,4 +6,4 @@ find . -size +10M | sed 's|^\./||g' | cat > .gitignore;
 ".ipynb_checkpoints" >> .gitignore;
 git add .;
 git commit -m "automatic commit";
-git push -u origin master;
+git push -u origin main;
