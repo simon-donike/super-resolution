@@ -1,7 +1,7 @@
 cd /home/simon/CDE_UBS/thesis/;
 git pull;
 git status;
-find . -size +10M | sed 's|^\./||g' | cat > .gitignore;
+find . -size +20M | sed 's|^\./||g' | cat > .gitignore;
 ".DS_Store" >> .gitignore;
 ".ipynb_checkpoints" >> .gitignore;
 git add .;
