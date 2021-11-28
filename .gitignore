@@ -1,7 +1,10 @@
-data_collection/sen2/examples/image_FRE.tif
-data_collection/sen2/examples/image_SRE.tif
+data_collection/sen2/theia_images/SENTINEL2A_20180927-112330-164_L2A_T30UVU_D.zip
+data_collection/sen2/theia_images/SENTINEL2A_20180927-112330-164_L2A_T30UVV_D.zip
+data_collection/sen2/theia_images/SENTINEL2A_20180927-112330-164_L2A_T30UWU_D.zip
+data_collection/sen2/theia_images/SENTINEL2A_20180927-112330-164_L2A_T30UWV_D.zip
+data_collection/sen2/theia_images/SENTINEL2B_20180926-110028-459_L2A_T30UXU_D.zip
 .DS_Store
 .ipynb_checkpoints
 mac_ignore.sh
 .gitignore
-auto_commit
+auto_commit.sh
