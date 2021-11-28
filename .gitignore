@@ -1,5 +1,7 @@
+data_collection/sen2/examples/image_FRE.tif
+data_collection/sen2/examples/image_SRE.tif
 .DS_Store
 .ipynb_checkpoints
 mac_ignore.sh
 .gitignore
-auto_commit.sh
+auto_commit
