@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30TXT_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30UUU_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30UWV_D.zip
@@ -129,3 +130,13 @@ data_collection/sen2/theia_images/original_files/SENTINEL2A_20180805-111514-408_
 .ipynb_checkpoints
 mac_ignore.sh
 auto_commit.sh
+=======
+data_collection/footprints/spot6_footprints/spot6_mosaic_medium_10.tif
+data_collection/sen2/examples/image_FRE.tif
+data_collection/sen2/examples/image_SRE.tif
+.DS_Store
+.ipynb_checkpoints
+mac_ignore.sh
+.gitignore
+auto_commit
+>>>>>>> Stashed changes
