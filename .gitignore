@@ -1,3 +1,4 @@
+data_collection/sen2/merged_reprojected.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30TXT_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30UUU_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30UWV_D.zip
@@ -123,7 +124,7 @@ data_collection/sen2/theia_images/original_files/SENTINEL2A_20180504-110230-455_
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180417-110822-655_L2A_T30TXT_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2B_20180505-112304-300_L2A_T30UVU_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180805-111514-408_L2A_T30UXU_D.zip
-data_collection/sen2/spot6_zipped.zip
+data_collection/spot6/spot6_new.zip
 *.tif
 *.jp2
 .DS_Store
