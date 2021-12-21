@@ -296,7 +296,9 @@ data_collection/sen2/date_mosaics/merged_reprojected20180901_mosaic.tif
 data_collection/sen2/date_mosaics/merged_reprojected20180507_mosaic.tif
 data_collection/small_sen2_1x1m.tif
 data_collection/footprints/other/FRANCE_2018_LA93_INFO.shp
+data_collection/spot6/spot6_mosaic.zip
 data_collection/spot6/spot6_new.zip
+data_collection/spot6/spot6_mosaic.tif
 *.tif
 *.jp2
 .DS_Store
