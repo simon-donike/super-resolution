@@ -6,10 +6,13 @@ SR-GAN/super-resolution/.div2k/caches/DIV2K_valid_LR_bicubic_X4.cache.data-00000
 testing/coordinates_validity_sen2_df.pkl
 testing/coordinates_validity_spot6_df.pkl
 testing/final_dataset.pkl
-data_loader/coordinates_validity_sen2_df.pkl
-data_loader/coordinates_validity_spot6_df.pkl
+data_loader/coordinates_validity_spot6_df_.pkl
+data_loader/coordinates_validity_sen2_df_.pkl
 data_loader/older_versions/coordinates_validity_df.pkl
-data_loader/final_dataset.pkl
+data_loader/data/coordinates_validity_sen2_df.pkl
+data_loader/data/coordinates_validity_spot6_df.pkl
+data_loader/data/final_dataset.pkl
+data_loader/final_dataset_.pkl
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30TXT_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30UUU_D.zip
 data_collection/sen2/theia_images/original_files/SENTINEL2A_20180626-111413-074_L2A_T30UWV_D.zip
