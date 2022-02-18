@@ -123,9 +123,9 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
         # iterate in N=window_size steps over image bounds, create grid
         coor = []
         for i in range(left,right,window_size):
-            x = i
+            x = i+0.1 # append offset to align points
             for j in range(bottom,top,window_size):
-                y = j
+                y = j+0.1 # append offset to align points
                 coor.append((x,y))
 
 
