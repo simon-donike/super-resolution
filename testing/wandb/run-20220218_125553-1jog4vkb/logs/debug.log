@@ -1,0 +1,37 @@
+2022-02-18 12:55:53,023 INFO    MainThread:13656 [wandb_setup.py:_flush():71] setting env: {}
+2022-02-18 12:55:53,023 INFO    MainThread:13656 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-02-18 12:55:53,023 INFO    MainThread:13656 [wandb_init.py:_log_setup():371] Logging user logs to /home/simon/CDE_UBS/thesis/testing/wandb/run-20220218_125553-1jog4vkb/logs/debug.log
+2022-02-18 12:55:53,024 INFO    MainThread:13656 [wandb_init.py:_log_setup():372] Logging internal logs to /home/simon/CDE_UBS/thesis/testing/wandb/run-20220218_125553-1jog4vkb/logs/debug-internal.log
+2022-02-18 12:55:53,024 INFO    MainThread:13656 [wandb_init.py:_jupyter_setup():321] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f06603510d0>
+2022-02-18 12:55:53,025 INFO    MainThread:13656 [wandb_init.py:init():404] calling init triggers
+2022-02-18 12:55:53,025 INFO    MainThread:13656 [wandb_init.py:init():411] wandb.init called with sweep_config: {}
+config: {}
+2022-02-18 12:55:53,025 INFO    MainThread:13656 [wandb_init.py:init():460] starting backend
+2022-02-18 12:55:53,025 INFO    MainThread:13656 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-02-18 12:55:53,080 ERROR   MainThread:13656 [wandb_init.py:init():958] error
+Traceback (most recent call last):
+  File "/home/simon/.local/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 931, in init
+    run = wi.init()
+  File "/home/simon/.local/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 467, in init
+    backend.ensure_launched()
+  File "/home/simon/.local/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 185, in ensure_launched
+    self.record_q = self._multiprocessing.Queue()
+  File "/anaconda/lib/python3.7/multiprocessing/context.py", line 102, in Queue
+    return Queue(maxsize, ctx=self.get_context())
+  File "/anaconda/lib/python3.7/multiprocessing/queues.py", line 42, in __init__
+    self._rlock = ctx.Lock()
+  File "/anaconda/lib/python3.7/multiprocessing/context.py", line 67, in Lock
+    return Lock(ctx=self.get_context())
+  File "/anaconda/lib/python3.7/multiprocessing/synchronize.py", line 162, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+  File "/anaconda/lib/python3.7/multiprocessing/synchronize.py", line 80, in __init__
+    register(self._semlock.name)
+  File "/anaconda/lib/python3.7/multiprocessing/semaphore_tracker.py", line 83, in register
+    self._send('REGISTER', name)
+  File "/anaconda/lib/python3.7/multiprocessing/semaphore_tracker.py", line 90, in _send
+    self.ensure_running()
+  File "/anaconda/lib/python3.7/multiprocessing/semaphore_tracker.py", line 71, in ensure_running
+    pid = util.spawnv_passfds(exe, args, fds_to_pass)
+  File "/anaconda/lib/python3.7/multiprocessing/util.py", line 432, in spawnv_passfds
+    False, False, None)
+OSError: [Errno 12] Cannot allocate memory
