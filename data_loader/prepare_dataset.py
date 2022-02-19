@@ -112,7 +112,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
         Takes filepath, creates grid of coordinate points in wanted window size.
         (sampling of points bc mask reads whole into RAM)
         """
-
+        import numpy as np
         # get bbox
         bbox = get_spatial_extent(filepath)
         left = int(bbox[0])
@@ -122,10 +122,10 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
 
         # iterate in N=window_size steps over image bounds, create grid
         coor = []
-        for i in range(left,right,window_size):
-            x = i+0.1 # append offset to align points
-            for j in range(bottom,top,window_size):
-                y = j+0.1 # append offset to align points
+        for i in np.arange(left,right+1.5,window_size*1.5): # offset to also create "last" points, 1.5 for pix size in M
+            x = i 
+            for j in np.arange(bottom,top+1.5,window_size*1.5): # offset to also create "last" points, 1.5 for pix size in M
+                y = j 
                 coor.append((x,y))
 
 
