@@ -26,3 +26,5 @@ config: {}
 2022-02-23 20:31:09,224 INFO    MainThread:12446 [wandb_init.py:init():633] run started, returning control to user process
 2022-02-23 20:34:10,108 INFO    MainThread:12446 [wandb_init.py:_pause_backend():284] pausing backend
 2022-02-23 20:34:10,108 INFO    MainThread:12446 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 21:05:01,396 INFO    MainThread:12446 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 0
+2022-02-23 21:05:01,398 INFO    MainThread:12446 [wandb_run.py:_restore():1752] restore
