@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
 
 import pandas as pd
@@ -36,7 +35,7 @@ spot6_mosaic = '/home/simon/CDE_UBS/thesis/data_collection/spot6/spot6_mosaic.ti
 spot6_path = "/home/simon/CDE_UBS/thesis/data_collection/spot6/"
 sen2_path = "/home/simon/CDE_UBS/thesis/data_collection/sen2/merged_reprojected/"
 closest_dates_filepath = "/home/simon/CDE_UBS/thesis/data_loader/data/closest_dates.pkl"
-#train_test_split_filepath = 
+
 
 
 # In[3]:
@@ -57,6 +56,12 @@ class Dataset(Dataset):
         self.window_size = window_size
         self.factor = factor
         self.window_size_sen2 = int(window_size/self.factor)
+        
+        # define transformer
+        self.transform_sen = transforms.Compose([
+            transforms.Normalize(mean=[479.0, 537.0, 344.0], std=[430.0, 290.0, 229.0]) ])
+        self.transform_spot = transforms.Compose([
+            transforms.Normalize(mean=[78.0, 91.0, 62.0], std=[36.0, 28.0, 30.0]) ])
         
         
         # Get DF from create_data function!
@@ -120,9 +125,21 @@ class Dataset(Dataset):
             end_spot6 = time.time()
         
         start_sen2 = time.time()
+        
         # load sen2 window
         current_dict = current_coor_df["other_valid_acq"][current_coor_df.index[0]] # extract current dict
         im_sen2 = Dataset.extract_sen2_window(Dataset.get_valid_sen2paths(current_dict,sen2_path),current_coor,self.window_size_sen2)
+        
+        while type(im_sen2)==str:
+            current_coor = self.coordinates[random.randint(1,len(self.coordinates)-1)]
+            current_coor_df = self.coordinates_closest_date_valid.loc[(self.coordinates_closest_date_valid["x"]==current_coor[0]) 
+                                                                    & (self.coordinates_closest_date_valid["y"]==current_coor[1])]
+            current_dict = current_coor_df["other_valid_acq"][current_coor_df.index[0]] # extract current dict
+            im_sen2 = Dataset.extract_sen2_window(Dataset.get_valid_sen2paths(current_dict,sen2_path),current_coor,self.window_size_sen2)
+            print("ERROR ITERATION")
+            
+        
+        
         end_sen2 = time.time()
         
         
@@ -142,6 +159,17 @@ class Dataset(Dataset):
             
         # resize for SR-CNN
         im_sen2 = Dataset.interpolate(im_sen2,size=self.window_size)
+    
+        # Perform Transform and change types
+        im_sen2  = torch.from_numpy(im_sen2)
+        im_spot6 = torch.from_numpy(im_spot6)
+        
+        im_sen2 = im_sen2.float()
+        im_spot6 = im_spot6.float()
+        
+        im_sen2  = self.transform_sen(im_sen2)
+        im_spot6 = self.transform_spot(im_spot6)
+        
         return(im_sen2,im_spot6)
 
     
@@ -153,7 +181,7 @@ class Dataset(Dataset):
         Output:
             - Image upsampled to 500*500
         """
-        dim = (500, 500)
+        dim = (size, size)
         b1 = cv2.resize(img[0], dim, interpolation = cv2.INTER_CUBIC)
         b2 = cv2.resize(img[1], dim, interpolation = cv2.INTER_CUBIC)
         b3 = cv2.resize(img[2], dim, interpolation = cv2.INTER_CUBIC)
@@ -162,6 +190,8 @@ class Dataset(Dataset):
         img = np.transpose(img,(2,0,1))
  
         return(img)
+    
+
 
     def extract_spot6_window(filepath,coordinates,window_size=500,show=False):
         """
@@ -263,7 +293,7 @@ class Dataset(Dataset):
             # protection for if more images requested than available
             if v==len(dates)-1:
                 warnings.warn("WARNING: More image aqc. dates requested than available. Recalculate full validity dataframe or request fewer sen2 images!")
-                break
+                return("ERROR")
 
         for v,i in enumerate(valid_files):
             valid_files[v] = path + valid_files[v]

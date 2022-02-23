@@ -1,0 +1,24 @@
+{
+    "os": "Linux-4.4.0-x86_64-with-debian-stretch-sid",
+    "python": "3.7.6",
+    "heartbeatAt": "2022-02-23T17:02:11.475184",
+    "startedAt": "2022-02-23T17:02:05.586844",
+    "docker": null,
+    "cpu_count": 10,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/home/simon/.local/share/jupyter/runtime/kernel-13e88348-56eb-436e-85d0-d5fd91a044ef.json"
+    ],
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "git@github.com:simon-donike/super-resolution.git",
+        "commit": "3d197e349ce78a31adc91b7366234e34b8be87ff"
+    },
+    "email": null,
+    "root": "/home/simon/CDE_UBS/thesis",
+    "host": "h2891400.stratoserver.net",
+    "username": "simon",
+    "executable": "/anaconda/bin/python"
+}
