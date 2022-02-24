@@ -1,0 +1,17 @@
+2022-02-24 21:09:31,778 INFO    MainThread:21790 [wandb_setup.py:_flush():71] setting env: {}
+2022-02-24 21:09:31,778 INFO    MainThread:21790 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-02-24 21:09:31,778 INFO    MainThread:21790 [wandb_init.py:_log_setup():371] Logging user logs to /home/simon/CDE_UBS/thesis/template/wandb/run-20220224_210931-1gy6uyui/logs/debug.log
+2022-02-24 21:09:31,779 INFO    MainThread:21790 [wandb_init.py:_log_setup():372] Logging internal logs to /home/simon/CDE_UBS/thesis/template/wandb/run-20220224_210931-1gy6uyui/logs/debug-internal.log
+2022-02-24 21:09:31,780 INFO    MainThread:21790 [wandb_init.py:_jupyter_setup():321] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7fdc27a93d10>
+2022-02-24 21:09:31,781 INFO    MainThread:21790 [wandb_init.py:init():404] calling init triggers
+2022-02-24 21:09:31,781 INFO    MainThread:21790 [wandb_init.py:init():411] wandb.init called with sweep_config: {}
+config: {}
+2022-02-24 21:09:31,781 INFO    MainThread:21790 [wandb_init.py:init():460] starting backend
+2022-02-24 21:09:31,781 INFO    MainThread:21790 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-02-24 21:09:31,856 INFO    MainThread:21790 [backend.py:ensure_launched():216] starting backend process...
+2022-02-24 21:09:31,913 INFO    MainThread:21790 [backend.py:ensure_launched():222] started backend process with pid: 21936
+2022-02-24 21:09:31,915 INFO    MainThread:21790 [wandb_init.py:init():469] backend started and connected
+2022-02-24 21:09:31,950 INFO    MainThread:21790 [wandb_run.py:_label_probe_notebook():911] probe notebook
+2022-02-24 21:09:31,951 INFO    MainThread:21790 [wandb_run.py:_label_probe_notebook():921] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-02-24 21:09:31,952 INFO    MainThread:21790 [wandb_init.py:init():533] updated telemetry
+2022-02-24 21:09:32,084 INFO    MainThread:21790 [wandb_init.py:init():563] communicating current version

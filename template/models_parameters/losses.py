@@ -23,7 +23,19 @@ def loss_psnr(a, b):
         return(psnr)
     except ValueError:
         return(0)
-        
+    
+    
+def loss_lpips(a,b):
+    import lpips
+    # transform to double
+    a = a.double()
+    b = b.double()
+    print(a)
+    # set up loss net
+    lpips_alex = lpips.LPIPS(net='alex',verbose=False)
+    # calc loss
+    res = lpips_alex(a,b)
+    return(res)
 
 def loss_mae(a,b):
     # MAE
