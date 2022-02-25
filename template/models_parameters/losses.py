@@ -98,7 +98,7 @@ def loss_ssim(a,b):
 def loss_ssim(a,b):
     # https://kornia.readthedocs.io/en/v0.1.2/_modules/torchgeometry/losses/ssim.html
     from models_parameters.ssimclass import ssim
-    return(ssim(a,b))
+    return(1-ssim(a,b,window_size=11)) # revert to optimize minimum ssim
     
     
     
