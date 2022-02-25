@@ -1,0 +1,78 @@
+2022-02-25 11:49:03,540 INFO    MainThread:4843 [wandb_setup.py:_flush():71] setting env: {}
+2022-02-25 11:49:03,540 INFO    MainThread:4843 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-02-25 11:49:03,540 INFO    MainThread:4843 [wandb_init.py:_log_setup():371] Logging user logs to /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_114903-takrw2rf/logs/debug.log
+2022-02-25 11:49:03,540 INFO    MainThread:4843 [wandb_init.py:_log_setup():372] Logging internal logs to /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_114903-takrw2rf/logs/debug-internal.log
+2022-02-25 11:49:03,540 INFO    MainThread:4843 [wandb_init.py:_jupyter_setup():321] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7fa4f986d310>
+2022-02-25 11:49:03,541 INFO    MainThread:4843 [wandb_init.py:init():404] calling init triggers
+2022-02-25 11:49:03,541 INFO    MainThread:4843 [wandb_init.py:init():411] wandb.init called with sweep_config: {}
+config: {}
+2022-02-25 11:49:03,541 INFO    MainThread:4843 [wandb_init.py:init():460] starting backend
+2022-02-25 11:49:03,541 INFO    MainThread:4843 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-02-25 11:49:03,605 INFO    MainThread:4843 [backend.py:ensure_launched():216] starting backend process...
+2022-02-25 11:49:03,662 INFO    MainThread:4843 [backend.py:ensure_launched():222] started backend process with pid: 4896
+2022-02-25 11:49:03,664 INFO    MainThread:4843 [wandb_init.py:init():469] backend started and connected
+2022-02-25 11:49:03,704 INFO    MainThread:4843 [wandb_run.py:_label_probe_notebook():911] probe notebook
+2022-02-25 11:49:03,705 INFO    MainThread:4843 [wandb_run.py:_label_probe_notebook():921] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-02-25 11:49:03,705 INFO    MainThread:4843 [wandb_init.py:init():533] updated telemetry
+2022-02-25 11:49:03,840 INFO    MainThread:4843 [wandb_init.py:init():563] communicating current version
+2022-02-25 11:49:05,666 INFO    MainThread:4843 [wandb_init.py:init():568] got version response upgrade_message: "wandb version 0.12.10 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-02-25 11:49:05,668 INFO    MainThread:4843 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-02-25 11:49:05,893 INFO    MainThread:4843 [wandb_init.py:init():606] starting run threads in backend
+2022-02-25 11:49:10,909 INFO    MainThread:4843 [wandb_run.py:_console_start():1810] atexit reg
+2022-02-25 11:49:10,910 INFO    MainThread:4843 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.WRAP
+2022-02-25 11:49:10,911 INFO    MainThread:4843 [wandb_run.py:_redirect():1721] Wrapping output streams.
+2022-02-25 11:49:10,912 INFO    MainThread:4843 [wandb_run.py:_redirect():1745] Redirects installed.
+2022-02-25 11:49:10,913 INFO    MainThread:4843 [wandb_init.py:init():633] run started, returning control to user process
+2022-02-25 11:49:21,660 INFO    MainThread:4843 [wandb_init.py:_pause_backend():284] pausing backend
+2022-02-25 11:49:21,661 INFO    MainThread:4843 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-25 11:49:40,002 INFO    MainThread:4843 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 0
+2022-02-25 11:49:40,005 INFO    MainThread:4843 [wandb_run.py:_restore():1752] restore
+2022-02-25 11:49:40,952 INFO    MainThread:4843 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 761
+}
+
+2022-02-25 11:49:41,257 INFO    MainThread:4843 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 761
+}
+
+2022-02-25 11:49:42,035 INFO    MainThread:4843 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 10073
+}
+
+2022-02-25 11:49:42,140 INFO    MainThread:4843 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 25342
+}
+
+2022-02-25 11:49:42,244 INFO    MainThread:4843 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 761
+  total_bytes: 25342
+}
+
+2022-02-25 11:49:42,347 INFO    MainThread:4843 [wandb_run.py:_wait_for_finish():1912] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 25270
+  total_bytes: 25342
+}
+

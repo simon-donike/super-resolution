@@ -6,7 +6,7 @@ import torch.optim as optim
 import torchvision
 from torch.autograd import Variable
 from torch.nn.functional import normalize
-from pytorch_msssim import ssim, ms_ssim, SSIM, MS_SSIM
+#from pytorch_msssim import ssim, ms_ssim, SSIM, MS_SSIM
 from skimage.metrics import structural_similarity as ssim
 
 
@@ -49,6 +49,7 @@ def min_max(a,b):
     
     
 def loss_lpips(a,b):
+    # DOENST WORK
     import lpips
     # transform to double
     a = a.type(torch.DoubleTensor)
@@ -61,60 +62,44 @@ def loss_lpips(a,b):
     return(res)
 
 def loss_mse(a,b):
-    # MSE
+    # WORKS
     loss = nn.MSELoss()
     mse = loss(a, b)
     mse = Variable(mse.data, requires_grad=True)
     return(mse)
 
 def loss_mae(a,b):
-    # MSE
+    # WORKS
     loss = nn.L1Loss()
     mae = loss(a, b)
     mae = Variable(mae.data, requires_grad=True)
     return(mae)
 
 def loss_psnr(a, b):
+    # WORKS, check for value range
     # https://github.com/bonlime/pytorch-tools/blob/master/pytorch_tools/metrics/psnr.py
     mse = torch.mean((a - b) ** 2)
-    return(20 * torch.log10(255.0 / torch.sqrt(mse)))
+    psnr_val = 20 * torch.log10(255.0 / torch.sqrt(mse))
+    return(100-psnr_val) # revert to optimize minimum psnr
 
-def loss_sim1(a,b):
+"""
+def loss_ssim(a,b):
     # to numpy, not possible for batches>1
-    a = a.detach().numpy()[0]
-    b = b.detach().numpy()[0]
-    ssim_const = ssim(a, b,data_range=b.max() - b.min(),multichannel=True)
-    # ValueError: win_size exceeds image extent.  If the input is a multichannel (color) image, set multichannel=True ?!
-    return(ssim_const)
+    a = a.detach().numpy()[0] # detach from grad and to numpy
+    b = b.detach().numpy()[0] # detach from grad and to numpy
+    a = np.transpose(a,(1,2,0)) # transform to numpy image format
+    b = np.transpose(b,(1,2,0)) # transform to numpy image format
+    ssim_const = ssim(a, b,data_range=b.max() - b.min(),multichannel=True) # calc with ssim
+    ssim_const = torch.tensor(ssim_const) # transform to tensor
+    ssim_const = Variable(ssim_const.data, requires_grad=True) # back to torch with grad
+    return(1-ssim_const) # revert to optimize minimum ssim
+"""
 
-
-def loss_ssim2(img1, img2):
-    # https://github.com/bonlime/pytorch-tools/blob/master/pytorch_tools/metrics/psnr.py
-    img1,img2 = min_max(img1,img2)
-    print(img1)
+def loss_ssim(a,b):
+    # https://kornia.readthedocs.io/en/v0.1.2/_modules/torchgeometry/losses/ssim.html
+    from models_parameters.ssimclass import ssim
+    return(ssim(a,b))
     
-    C1 = (0.01 * 255) ** 2
-    C2 = (0.03 * 255) ** 2
+    
+    
 
-    img1 = img1.astype(np.float64)
-    img2 = img2.astype(np.float64)
-    kernel = cv2.getGaussianKernel(11, 1.5)
-    window = np.outer(kernel, kernel.transpose())
-
-    mu1 = cv2.filter2D(img1, -1, window)[5:-5, 5:-5]  # valid
-    mu2 = cv2.filter2D(img2, -1, window)[5:-5, 5:-5]
-    mu1_sq = mu1 ** 2
-    mu2_sq = mu2 ** 2
-    mu1_mu2 = mu1 * mu2
-    sigma1_sq = cv2.filter2D(img1 ** 2, -1, window)[5:-5, 5:-5] - mu1_sq
-    sigma2_sq = cv2.filter2D(img2 ** 2, -1, window)[5:-5, 5:-5] - mu2_sq
-    sigma12 = cv2.filter2D(img1 * img2, -1, window)[5:-5, 5:-5] - mu1_mu2
-
-    ssim_map = ((2 * mu1_mu2 + C1) * (2 * sigma12 + C2)) / ((mu1_sq + mu2_sq + C1) * (sigma1_sq + sigma2_sq + C2))
-    return ssim_map.mean()
-
-def loss_ssim3(a,b):
-    # https://github.com/VainF/pytorch-msssim
-    ssim_loss = 1 - ssim( a, b, data_range=1, size_average=True,multichannel=True) # return a scalar
-    return(ssim_loss)
-    # win_size exceeds image extent.  If the input is a multichannel (color) image, set multichannel=True
