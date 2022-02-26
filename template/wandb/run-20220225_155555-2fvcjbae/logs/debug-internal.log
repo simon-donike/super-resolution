@@ -1,0 +1,143 @@
+2022-02-25 15:55:57,962 INFO    MainThread:17318 [internal.py:wandb_internal():90] W&B internal server running at pid: 17318, started at: 2022-02-25 15:55:57.961832
+2022-02-25 15:55:57,969 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: check_version
+2022-02-25 15:55:57,970 DEBUG   SenderThread:17318 [sender.py:send():234] send: header
+2022-02-25 15:55:57,970 INFO    WriterThread:17318 [datastore.py:open_for_write():77] open: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/run-2fvcjbae.wandb
+2022-02-25 15:55:57,970 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: check_version
+2022-02-25 15:55:58,097 DEBUG   SenderThread:17318 [sender.py:send():234] send: run
+2022-02-25 15:55:58,346 INFO    SenderThread:17318 [dir_watcher.py:__init__():169] watching files in: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files
+2022-02-25 15:55:58,346 INFO    SenderThread:17318 [sender.py:_start_run_threads():807] run started: 2fvcjbae with start time 1645800956
+2022-02-25 15:55:58,349 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: run_start
+2022-02-25 15:55:58,349 DEBUG   SenderThread:17318 [sender.py:send():234] send: summary
+2022-02-25 15:55:58,350 INFO    SenderThread:17318 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-02-25 15:55:59,350 INFO    Thread-8  :17318 [dir_watcher.py:_on_file_created():217] file/dir created: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/wandb-summary.json
+2022-02-25 15:56:01,668 DEBUG   HandlerThread:17318 [meta.py:__init__():40] meta init
+2022-02-25 15:56:01,669 DEBUG   HandlerThread:17318 [meta.py:__init__():54] meta init done
+2022-02-25 15:56:01,669 DEBUG   HandlerThread:17318 [meta.py:probe():214] probe
+2022-02-25 15:56:01,671 DEBUG   HandlerThread:17318 [meta.py:_setup_git():204] setup git
+2022-02-25 15:56:01,717 DEBUG   HandlerThread:17318 [meta.py:_setup_git():211] setup git done
+2022-02-25 15:56:01,717 DEBUG   HandlerThread:17318 [meta.py:_save_pip():58] save pip
+2022-02-25 15:56:01,718 DEBUG   HandlerThread:17318 [meta.py:_save_pip():72] save pip done
+2022-02-25 15:56:01,719 DEBUG   HandlerThread:17318 [meta.py:_save_conda():79] save conda
+2022-02-25 15:56:02,374 INFO    Thread-8  :17318 [dir_watcher.py:_on_file_created():217] file/dir created: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/conda-environment.yaml
+2022-02-25 15:56:02,376 INFO    Thread-8  :17318 [dir_watcher.py:_on_file_created():217] file/dir created: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/requirements.txt
+2022-02-25 15:56:03,374 INFO    Thread-8  :17318 [dir_watcher.py:_on_file_created():217] file/dir created: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/output.log
+2022-02-25 15:56:14,379 INFO    Thread-8  :17318 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/output.log
+2022-02-25 15:56:26,988 DEBUG   HandlerThread:17318 [meta.py:_save_conda():89] save conda done
+2022-02-25 15:56:26,988 DEBUG   HandlerThread:17318 [meta.py:probe():252] probe done
+2022-02-25 15:56:26,992 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: stop_status
+2022-02-25 15:56:26,993 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: pause
+2022-02-25 15:56:26,994 INFO    HandlerThread:17318 [handler.py:handle_request_pause():612] stopping system metrics thread
+2022-02-25 15:56:26,994 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: stop_status
+2022-02-25 15:56:27,052 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: stop_status
+2022-02-25 15:56:27,178 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: stop_status
+2022-02-25 15:56:27,388 INFO    Thread-8  :17318 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/conda-environment.yaml
+2022-02-25 15:56:27,388 INFO    Thread-8  :17318 [dir_watcher.py:_on_file_created():217] file/dir created: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/wandb-metadata.json
+2022-02-25 15:56:27,550 DEBUG   SenderThread:17318 [sender.py:send():234] send: files
+2022-02-25 15:56:27,551 INFO    SenderThread:17318 [sender.py:_save_file():939] saving file wandb-metadata.json with policy now
+2022-02-25 15:56:27,553 DEBUG   SenderThread:17318 [sender.py:send():234] send: stats
+2022-02-25 15:56:28,170 INFO    Thread-11 :17318 [upload_job.py:push():137] Uploaded file /tmp/tmptgqdsrrkwandb/3niz5spy-wandb-metadata.json
+2022-02-25 15:56:42,552 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: stop_status
+2022-02-25 15:56:42,552 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: stop_status
+2022-02-25 15:56:57,731 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: stop_status
+2022-02-25 15:56:57,731 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: stop_status
+2022-02-25 15:57:12,913 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: stop_status
+2022-02-25 15:57:12,913 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: stop_status
+2022-02-25 15:57:24,410 WARNING MainThread:17318 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-02-25 15:57:25,450 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: poll_exit
+2022-02-25 15:57:25,450 DEBUG   SenderThread:17318 [sender.py:send():234] send: telemetry
+2022-02-25 15:57:25,450 DEBUG   SenderThread:17318 [sender.py:send():234] send: exit
+2022-02-25 15:57:25,450 INFO    SenderThread:17318 [sender.py:send_exit():366] handling exit code: 0
+2022-02-25 15:57:25,451 INFO    SenderThread:17318 [sender.py:send_exit():368] handling runtime: 28
+2022-02-25 15:57:25,451 INFO    SenderThread:17318 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-02-25 15:57:25,452 INFO    SenderThread:17318 [sender.py:send_exit():374] send defer
+2022-02-25 15:57:25,454 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: poll_exit
+2022-02-25 15:57:25,455 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:25,455 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 0
+2022-02-25 15:57:25,456 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:25,456 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 0
+2022-02-25 15:57:25,456 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 1
+2022-02-25 15:57:25,456 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:25,456 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 1
+2022-02-25 15:57:25,456 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:25,457 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 1
+2022-02-25 15:57:25,457 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 2
+2022-02-25 15:57:25,457 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:25,457 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 2
+2022-02-25 15:57:25,457 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:25,457 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 2
+2022-02-25 15:57:25,457 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 3
+2022-02-25 15:57:25,458 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:25,458 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 3
+2022-02-25 15:57:25,458 DEBUG   SenderThread:17318 [sender.py:send():234] send: summary
+2022-02-25 15:57:25,458 INFO    SenderThread:17318 [sender.py:_save_file():939] saving file wandb-summary.json with policy end
+2022-02-25 15:57:25,459 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:25,459 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 3
+2022-02-25 15:57:25,459 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 4
+2022-02-25 15:57:25,459 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:25,459 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 4
+2022-02-25 15:57:25,459 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:25,460 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 4
+2022-02-25 15:57:25,566 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: poll_exit
+2022-02-25 15:57:25,659 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 5
+2022-02-25 15:57:25,659 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: poll_exit
+2022-02-25 15:57:25,659 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:25,660 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 5
+2022-02-25 15:57:25,660 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:25,660 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 5
+2022-02-25 15:57:25,660 INFO    SenderThread:17318 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-02-25 15:57:25,762 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: poll_exit
+2022-02-25 15:57:26,399 INFO    SenderThread:17318 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/wandb-summary.json
+2022-02-25 15:57:26,399 INFO    SenderThread:17318 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/output.log
+2022-02-25 15:57:26,399 INFO    SenderThread:17318 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/config.yaml
+2022-02-25 15:57:26,400 INFO    SenderThread:17318 [dir_watcher.py:finish():313] scan: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files
+2022-02-25 15:57:26,400 INFO    SenderThread:17318 [dir_watcher.py:finish():327] scan save: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/config.yaml config.yaml
+2022-02-25 15:57:26,400 INFO    SenderThread:17318 [dir_watcher.py:finish():327] scan save: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/output.log output.log
+2022-02-25 15:57:26,407 INFO    SenderThread:17318 [dir_watcher.py:finish():327] scan save: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/requirements.txt requirements.txt
+2022-02-25 15:57:26,407 INFO    SenderThread:17318 [dir_watcher.py:finish():327] scan save: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/wandb-summary.json wandb-summary.json
+2022-02-25 15:57:26,408 INFO    SenderThread:17318 [dir_watcher.py:finish():327] scan save: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/wandb-metadata.json wandb-metadata.json
+2022-02-25 15:57:26,408 INFO    SenderThread:17318 [dir_watcher.py:finish():327] scan save: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/conda-environment.yaml conda-environment.yaml
+2022-02-25 15:57:26,413 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 6
+2022-02-25 15:57:26,419 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: poll_exit
+2022-02-25 15:57:26,430 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:26,430 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 6
+2022-02-25 15:57:26,431 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:26,431 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 6
+2022-02-25 15:57:26,431 INFO    SenderThread:17318 [file_pusher.py:finish():177] shutting down file pusher
+2022-02-25 15:57:26,528 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: poll_exit
+2022-02-25 15:57:26,529 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: poll_exit
+2022-02-25 15:57:26,634 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: poll_exit
+2022-02-25 15:57:26,635 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: poll_exit
+2022-02-25 15:57:26,737 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: poll_exit
+2022-02-25 15:57:26,737 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: poll_exit
+2022-02-25 15:57:26,841 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: poll_exit
+2022-02-25 15:57:26,842 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: poll_exit
+2022-02-25 15:57:26,990 INFO    Thread-13 :17318 [upload_job.py:push():137] Uploaded file /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/output.log
+2022-02-25 15:57:26,992 INFO    Thread-14 :17318 [upload_job.py:push():137] Uploaded file /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/requirements.txt
+2022-02-25 15:57:27,014 INFO    Thread-16 :17318 [upload_job.py:push():137] Uploaded file /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/conda-environment.yaml
+2022-02-25 15:57:27,035 INFO    Thread-15 :17318 [upload_job.py:push():137] Uploaded file /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/wandb-summary.json
+2022-02-25 15:57:27,083 INFO    Thread-12 :17318 [upload_job.py:push():137] Uploaded file /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/files/config.yaml
+2022-02-25 15:57:27,284 INFO    Thread-7  :17318 [sender.py:transition_state():387] send defer: 7
+2022-02-25 15:57:27,285 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:27,285 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 7
+2022-02-25 15:57:27,285 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:27,285 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 7
+2022-02-25 15:57:27,696 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 8
+2022-02-25 15:57:27,696 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:27,696 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 8
+2022-02-25 15:57:27,697 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:27,697 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 8
+2022-02-25 15:57:27,697 INFO    SenderThread:17318 [sender.py:transition_state():387] send defer: 9
+2022-02-25 15:57:27,698 DEBUG   HandlerThread:17318 [handler.py:handle_request():130] handle_request: defer
+2022-02-25 15:57:27,698 DEBUG   SenderThread:17318 [sender.py:send():234] send: final
+2022-02-25 15:57:27,698 INFO    HandlerThread:17318 [handler.py:handle_request_defer():147] handle defer: 9
+2022-02-25 15:57:27,698 DEBUG   SenderThread:17318 [sender.py:send():234] send: footer
+2022-02-25 15:57:27,698 DEBUG   SenderThread:17318 [sender.py:send_request():248] send_request: defer
+2022-02-25 15:57:27,698 INFO    SenderThread:17318 [sender.py:send_request_defer():383] handle sender defer: 9
+2022-02-25 15:57:35,421 WARNING MainThread:17318 [internal.py:is_dead():367] Internal process exiting, parent pid 17265 disappeared
+2022-02-25 15:57:35,421 ERROR   MainThread:17318 [internal.py:wandb_internal():142] Internal process shutdown.
+2022-02-25 15:57:35,699 INFO    WriterThread:17318 [datastore.py:close():281] close: /home/simon/CDE_UBS/thesis/template/wandb/run-20220225_155555-2fvcjbae/run-2fvcjbae.wandb
+2022-02-25 15:57:35,699 INFO    SenderThread:17318 [sender.py:finish():1070] shutting down sender
+2022-02-25 15:57:35,700 INFO    SenderThread:17318 [file_pusher.py:finish():177] shutting down file pusher
+2022-02-25 15:57:35,700 INFO    SenderThread:17318 [file_pusher.py:join():182] waiting for file pusher
+2022-02-25 15:57:35,707 INFO    HandlerThread:17318 [handler.py:finish():731] shutting down handler
+2022-02-25 15:57:35,708 INFO    MainThread:17318 [internal.py:handle_exit():77] Internal process exited

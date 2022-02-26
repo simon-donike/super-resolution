@@ -52,35 +52,32 @@ def loss_lpips(a,b):
     # DOENST WORK
     import lpips
     # transform to double
-    a = a.type(torch.DoubleTensor)
-    b = b.type(torch.DoubleTensor)
+    #a = a.type(torch.DoubleTensor)
+    #b = b.type(torch.DoubleTensor)
     print(a)
     # set up loss net
     lpips_alex = lpips.LPIPS(net='alex',verbose=False)
     # calc loss
     res = lpips_alex(a,b)
+    # RuntimeError: expected scalar type Double but found Float
     return(res)
 
 def loss_mse(a,b):
     # WORKS
-    loss = nn.MSELoss()
-    mse = loss(a, b)
-    mse = Variable(mse.data, requires_grad=True)
-    return(mse)
+    return(torch.nn.functional.mse_loss(a,b))
 
 def loss_mae(a,b):
     # WORKS
-    loss = nn.L1Loss()
-    mae = loss(a, b)
-    mae = Variable(mae.data, requires_grad=True)
-    return(mae)
+    return(torch.nn.functional.l1_loss(a,b))
 
 def loss_psnr(a, b):
     # WORKS, check for value range
     # https://github.com/bonlime/pytorch-tools/blob/master/pytorch_tools/metrics/psnr.py
     mse = torch.mean((a - b) ** 2)
     psnr_val = 20 * torch.log10(255.0 / torch.sqrt(mse))
-    return(100-psnr_val) # revert to optimize minimum psnr
+    # revert to optimize minimum psnr
+    # inspired by https://kornia.readthedocs.io/en/latest/_modules/kornia/losses/psnr.html
+    return(-1*psnr_val)
 
 """
 def loss_ssim(a,b):
@@ -96,6 +93,7 @@ def loss_ssim(a,b):
 """
 
 def loss_ssim(a,b):
+    # WORKS
     # https://kornia.readthedocs.io/en/v0.1.2/_modules/torchgeometry/losses/ssim.html
     from models_parameters.ssimclass import ssim
     return(1-ssim(a,b,window_size=11)) # revert to optimize minimum ssim

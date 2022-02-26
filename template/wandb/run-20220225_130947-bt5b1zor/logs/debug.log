@@ -47,3 +47,5 @@ config: {}
 2022-02-25 14:20:05,848 INFO    MainThread:11061 [wandb_init.py:_resume_backend():293] resuming backend
 2022-02-25 14:20:05,850 INFO    MainThread:11061 [wandb_init.py:_pause_backend():284] pausing backend
 2022-02-25 14:20:05,850 INFO    MainThread:11061 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-25 15:53:24,976 INFO    MainThread:11061 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 0
+2022-02-25 15:53:24,980 INFO    MainThread:11061 [wandb_run.py:_restore():1752] restore
