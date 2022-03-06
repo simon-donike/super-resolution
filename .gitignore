@@ -1,3 +1,5 @@
+google/writing/Model Results.pdf
+google/writing/Model Results.xlsx
 template/final_dataset.pkl
 SR-GAN/Pytorch-UNet/.git/objects/pack/pack-0ef180ae78c0ee77928e68d4e962ccc924f3e580.pack
 SR-GAN/super-resolution/.git/objects/pack/pack-ac650687824522f94dcb8fda014bc0e1a60dcb69.pack
@@ -5,6 +7,8 @@ SR-GAN/super-resolution/.div2k/caches/DIV2K_valid_HR.cache.data-00000-of-00001
 SR-GAN/super-resolution/.div2k/caches/DIV2K_train_LR_bicubic_X4.cache.data-00000-of-00001
 SR-GAN/super-resolution/.div2k/caches/DIV2K_train_HR.cache.data-00000-of-00001
 SR-GAN/super-resolution/.div2k/caches/DIV2K_valid_LR_bicubic_X4.cache.data-00000-of-00001
+.git/objects/0b/939c3516120d74332f6dfc5f1d928949f2e59d
+.git/objects/01/cb777fc339f47b9c57f58a78c00c173275f7d8
 testing/coordinates_validity_sen2_df.pkl
 testing/coordinates_validity_spot6_df.pkl
 testing/final_dataset.pkl
