@@ -1,11 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
-# Define torch dataset Class
-def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,window_size=500,factor=(10/1.5),clip=True,temporal_images=1):
+def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,window_size=500, factor=(10/1.5),clip=True,temporal_images=1):
     import pandas as pd
     import matplotlib.pyplot as plt
     import random
@@ -43,7 +36,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
                 #print('Pixel Y, X coords: {}, {}'.format(py, px))
 
                 # Build an NxN window (top left corner), px - window_size//2, py - window_size//2
-                window = rasterio.windows.Window(px, py , window_size, window_size)
+                window = rasterio.windows.Window(px, py, window_size, window_size)
 
                 # Read the data in the window
                 # clip is a nbands * N * N numpy array
@@ -155,6 +148,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
             print("clipping done!                        \n")
 
         return(coor)
+
 
     def get_spatial_extent(filepath):
         """
@@ -307,7 +301,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
                     # clip is a nbands * N * N numpy array
                     clip = dataset.read(window=window)
 
-                    if clip.shape == (3, window_size, window_size) and np.average(clip)>0.1:
+                    if clip.shape == (3, window_size, window_size) and clip.min()>0.0: #and np.average(clip)>0.1:
                         validity = True
 
                         if show: # show image
@@ -373,7 +367,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
             count=count+1
             if count%100==0:
                 perc = round(100 * float(count)/float(len(df)),2)
-                print(str(perc),"%   ",end="\r")
+                print(str(perc),"%                   ",end="\r")
 
         df["other_valid_acq"]=ls_dict
         df.to_pickle("coordinates_validity_sen2_df.pkl")
@@ -455,8 +449,6 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
     return(coordinates_closest_date_valid)
     
 
-
-# In[2]:
 
 
 # inputs
