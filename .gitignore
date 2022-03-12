@@ -14,6 +14,7 @@ testing/coordinates_validity_spot6_df.pkl
 testing/final_dataset.pkl
 data_loader/coordinates_validity_sen2_df.pkl
 data_loader/coordinates_validity_spot6_df.pkl
+data_loader/1.csv
 data_loader/older_versions/coordinates_validity_sen2_df.pkl
 data_loader/older_versions/coordinates_validity_spot6_df.pkl
 data_loader/older_versions/coordinates_validity_df.pkl

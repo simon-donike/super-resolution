@@ -117,7 +117,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
         coor = []
         for i in np.arange(left,right+1.5,window_size*1.5): # offset to also create "last" points, 1.5 for pix size in M
             x = i 
-            for j in np.arange(bottom,top+1.5,window_size*1.5): # offset to also create "last" points, 1.5 for pix size in M
+            for j in np.arange(bottom,top,window_size*1.5): # offset to also create "last" points, 1.5 for pix size in M
                 y = j 
                 coor.append((x,y))
 
