@@ -80,7 +80,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
             for x,y,file in zip(df["x"],df["y"],df["name"]):
                 
                 try:
-                    tmp_image = extract_spot6_window(str(spot6_path+file),(x,y))
+                    tmp_image = extract_spot6_window(str(spot6_path),(x,y))
 
                     if tmp_image.shape == (3,window_size,window_size):
                         ls.append(True)
@@ -104,7 +104,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
     def create_window_coordinates(filepath,window_size=500,clip=True):
         """
         Inputs:
-            - fiepath: path of raster that is to be loaded by window
+            - filepath: path of raster that is to be loaded by window
             - window_size: window will be pixel size NxN
             - clip: specify if every grid point should be sampled and dropped if value is invalid
         Outputs:
@@ -307,7 +307,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
                     # clip is a nbands * N * N numpy array
                     clip = dataset.read(window=window)
 
-                    if clip.shape == (3, window_size, window_size) and np.average(clip)>0.1:
+                    if clip.shape == (3, window_size, window_size) and np.min(clip)>0.1:
                         validity = True
 
                         if show: # show image
@@ -440,7 +440,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
         
 
         # check validity for spot6
-        coordinates_closest_date_valid = check_spot6_validity(coordinates_closest_date_valid,spot6_path,window_size)
+        coordinates_closest_date_valid = check_spot6_validity(coordinates_closest_date_valid,'/home/simon/CDE_UBS/thesis/data_collection/spot6/spot6_mosaic.tif',window_size)
 
         # reset coordinates based on manipulated coordinates datasets, reset index
         coordinates_closest_date_valid = coordinates_closest_date_valid.reset_index()

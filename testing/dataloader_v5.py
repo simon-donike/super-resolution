@@ -101,7 +101,7 @@ class Dataset(Dataset):
         Output:
             - x and y images as np arrays
         """
-        get_from_mosaic = False # set wether window should be taken from mosaic or individual spot6 files
+        get_from_mosaic = True # set wether window should be taken from mosaic or individual spot6 files
         
         
         import time
@@ -246,7 +246,7 @@ class Dataset(Dataset):
                             print("Shape invalid - most likely edge window")
         return(clip)
     
-    def get_valid_sen2paths(acq_dict_sen2,path,num_images=1):
+    def get_valid_sen2paths(acq_dict_sen2,path,num_images=999):
         dates = list(acq_dict_sen2.keys()) # get keys ergo closest times
         dates.sort() # sort so lowest can be accessed
 
