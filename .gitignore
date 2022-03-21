@@ -11,7 +11,9 @@ SR-GAN/super-resolution/.div2k/caches/DIV2K_valid_LR_bicubic_X4.cache.data-00000
 .git/objects/0b/939c3516120d74332f6dfc5f1d928949f2e59d
 .git/objects/01/cb777fc339f47b9c57f58a78c00c173275f7d8
 testing/coordinates_validity_sen2_df.pkl
+testing/coordinates_validity_spot6_df.pkl
 testing/df_saved_images.pkl
+testing/final_dataset.pkl
 testing/export.csv
 data_loader/coordinates_validity_sen2_df.pkl
 data_loader/coordinates_validity_spot6_df.pkl
