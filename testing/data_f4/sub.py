@@ -29,3 +29,4 @@ for sen,spot in zip(df["sen2_filenames"],df["spot6_filenames"]):
     if counter%10==0:
         print(counter,"/",len(df),"           ",end="\r")
 df["subfolder"]=l
+df.to_pickle("images_subfolders.pkl")
