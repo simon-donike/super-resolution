@@ -16,9 +16,11 @@ testing/data_f4_pkls/coordinates_validity_spot6_df.pkl
 testing/data_f4_pkls/df_saved_images.pkl
 testing/data_f4_pkls/final_dataset.pkl
 testing/data_f4/images_subfolders.pkl
+testing/data_f4/images_subfolders3.pkl
 testing/data_f4/df_saved_images.pkl
 testing/data_f4/x
 testing/data_f4/x.zip
+testing/data_f4/data_f4.zip
 testing/data_f4/y.zip
 testing/export.csv
 data_loader/coordinates_validity_sen2_df.pkl
