@@ -169,7 +169,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
             - joined DF of coordiantes with closest sen2 dates and paths
         """
         
-        perform_train_test_split = True
+        perform_train_test_split = False
         train_test_split_filepath = "train_test3.gpkg"
         
         
