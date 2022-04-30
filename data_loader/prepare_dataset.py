@@ -430,7 +430,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
         # test all sen2 coordinate windows for validity (warning, takes several hours!)
         coordinates_closest_date_valid = create_sen2_validity_dataframe(coordinates_closest_date,sen2_path,window_size_sen2)
         # drop points where != train
-        coordinates_closest_date_valid = coordinates_closest_date_valid[coordinates_closest_date_valid["type"]=="train"]
+        #coordinates_closest_date_valid = coordinates_closest_date_valid[coordinates_closest_date_valid["type"]=="train"]
         
 
         # check validity for spot6
