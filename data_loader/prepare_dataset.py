@@ -243,7 +243,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
                 # clip is a nbands * N * N numpy array
                 clip = dataset.read(window=window)
 
-                if clip.shape == (3, window_size, window_size) and np.average(clip)>0.1:
+                if clip.shape == (3, window_size, window_size) and  np.median(clip)>0:      #(100 * float(np.count_nonzero(clip))/float(75*75*3))  > 0.10:
                     validity = True
 
                     if show: # show image
@@ -301,7 +301,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
                     # clip is a nbands * N * N numpy array
                     clip = dataset.read(window=window)
 
-                    if clip.shape == (3, window_size, window_size) and clip.min()>0.0: #and np.average(clip)>0.1:
+                    if clip.shape == (3, window_size, window_size) and np.median(clip)>0:#and (100 * float(np.count_nonzero(clip))/float(75*75*3))  > 0.10: # PERFORM CHECK IF MORE THAN 10PERC IS BLACK #and np.min(clip)>0.1:
                         validity = True
 
                         if show: # show image
@@ -311,7 +311,7 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
                             plt.show()
                     else:
                         validity = False
-
+            #print(validity)
             return(validity)
             # END INNER FUNCTION
         
