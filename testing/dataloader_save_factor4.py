@@ -31,7 +31,7 @@ import cv2
 
 
 # inputs
-#spot6_mosaic = '/home/simon/CDE_UBS/thesis/data_collection/spot6/spot6_mosaic.tif'
+spot6_mosaic = '/home/simon/CDE_UBS/thesis/data_collection/spot6/spot6_mosaic.tif'
 spot6_path = "/content/drive/MyDrive/thesis/data/spot6/"
 sen2_path = "/content/drive/MyDrive/thesis/data/sen2/"
 #closest_dates_filepath = "/home/simon/CDE_UBS/thesis/data_loader/data/closest_dates.pkl"
