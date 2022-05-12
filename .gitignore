@@ -40,6 +40,7 @@ data_loader/older_versions/coordinates_validity_spot6_df_.pkl
 data_loader/older_versions/coordinates_validity_sen2_df_.pkl
 data_loader/older_versions/final_dataset.pkl
 data_loader/older_versions/final_dataset_.pkl
+data_loader/sen2_count.csv
 data_loader/data/coordinates_validity_sen2_df.pkl
 data_loader/data/coordinates_validity_spot6_df.pkl
 data_loader/data/final_dataset.pkl
