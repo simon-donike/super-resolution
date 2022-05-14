@@ -27,6 +27,9 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
         if type(coordinates)!=list:
             coordinates = [coordinates]
 
+        get_from_mosaic=True
+        if get_from_mosaic:
+            filepath='/home/simon/CDE_UBS/thesis/data_collection/spot6/spot6_mosaic.tif'
         with rasterio.open(filepath) as dataset:
             # Loop through your list of coords
             for i, (lon, lat) in enumerate(coordinates):
