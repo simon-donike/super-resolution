@@ -438,7 +438,13 @@ def prepare_dataset(spot6_mosaic,sen2_path,spot6_path,closest_dates_filepath,win
 
         # check validity for spot6
         coordinates_closest_date_valid = check_spot6_validity(coordinates_closest_date_valid,spot6_path,window_size)
-
+        """
+        _ = []
+        for i in range(len(coordinates_closest_date_valid)):
+            _.append(True)
+        coordinates_closest_date_valid["spot6_validity"] = _
+        """
+        
         # reset coordinates based on manipulated coordinates datasets, reset index
         coordinates_closest_date_valid = coordinates_closest_date_valid.reset_index()
         tmp_coordinates = []

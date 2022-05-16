@@ -26,6 +26,7 @@ testing/data_f4/x
 testing/data_f4/x.zip
 testing/data_f4/data_f4.zip
 testing/data_f4/y.zip
+testing/final_dataset.pkl
 testing/new_chips/final_dataset.pkl
 testing/new_chips/export.csv
 testing/export.csv
