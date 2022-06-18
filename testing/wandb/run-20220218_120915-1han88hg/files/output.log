@@ -1,4 +1,0 @@
-(75, 75)
-(75, 75)
-(75, 75)
-Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
