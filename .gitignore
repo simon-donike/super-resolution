@@ -4,6 +4,7 @@ template/wandb/run-20220301_133400-3e7caynv/logs/debug-internal.log
 template/final_dataset.pkl
 visualizations/data/spot6_dates.geojson
 visualizations/data/spot6_DOY.geojson
+data_loader.zip
 SR-GAN/Pytorch-UNet/.git/objects/pack/pack-0ef180ae78c0ee77928e68d4e962ccc924f3e580.pack
 SR-GAN/super-resolution/.git/objects/pack/pack-ac650687824522f94dcb8fda014bc0e1a60dcb69.pack
 SR-GAN/super-resolution/.div2k/caches/DIV2K_valid_HR.cache.data-00000-of-00001
