@@ -14,6 +14,7 @@ SR-GAN/super-resolution/.div2k/caches/DIV2K_valid_LR_bicubic_X4.cache.data-00000
 CLC/bretagne_landCover.gpkg
 CLC/clc_bretagne.gpkg
 .git/objects/0b/939c3516120d74332f6dfc5f1d928949f2e59d
+.git/objects/pack/pack-8659e5b6350c226dc94b7798e50ffcd865255f33.pack
 .git/objects/01/cb777fc339f47b9c57f58a78c00c173275f7d8
 testing/data_f4_pkls/coordinates_validity_sen2_df.pkl
 testing/data_f4_pkls/coordinates_validity_spot6_df.pkl
