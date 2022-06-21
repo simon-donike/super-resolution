@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "inference_file_2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2154" } },
+"features": [
+{ "type": "Feature", "properties": { "field_1": 256, "id": 257, "left": 228987.0, "top": 6792009.0, "right": 238986.0, "bottom": 6782010.0, "grid": 257, "type": "test" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 228987.0, 6792009.0 ], [ 238986.0, 6792009.0 ], [ 238986.0, 6782010.0 ], [ 228987.0, 6782010.0 ], [ 228987.0, 6792009.0 ] ] ] } },
+{ "type": "Feature", "properties": { "field_1": 274, "id": 275, "left": 238986.0, "top": 6802008.0, "right": 248985.0, "bottom": 6792009.0, "grid": 275, "type": "test" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 238986.0, 6802008.0 ], [ 248985.0, 6802008.0 ], [ 248985.0, 6792009.0 ], [ 238986.0, 6792009.0 ], [ 238986.0, 6802008.0 ] ] ] } },
+{ "type": "Feature", "properties": { "field_1": 275, "id": 276, "left": 238986.0, "top": 6792009.0, "right": 248985.0, "bottom": 6782010.0, "grid": 276, "type": "test" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 238986.0, 6792009.0 ], [ 248985.0, 6792009.0 ], [ 248985.0, 6782010.0 ], [ 238986.0, 6782010.0 ], [ 238986.0, 6792009.0 ] ] ] } }
+]
+}
